@@ -39,21 +39,15 @@ p {
         <p> example</p>
 </div>
 
-<div>
-    <body>
-<h2> Hello </h2>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 
-        <p> example example </p>
-        <p> example</p>
-</div>
 
-<div>
-    <body>
-<h2> Hello </h2>
-
-        <p> example example </p>
-        <p> example</p>
-</div>
 
     </body>
 </html>
